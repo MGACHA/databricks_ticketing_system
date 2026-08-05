@@ -1,0 +1,13 @@
+command:
+  - streamlit
+  - run
+  - app.py
+  - --server.port
+  - "$DATABRICKS_APP_PORT"
+
+resources:
+  - name: lakebase-support-db
+    lakebase:
+      project: databrick-ai-bootcamp-postgres
+      branch: production
+      database: databricks_postgres
